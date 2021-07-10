@@ -107,6 +107,30 @@ namespace LinkedList
                 temp.Next = null;
             }
         }
+        //Search the element in the list
+        public void Search(T value)
+        {
+            if (head == null)
+            {
+                Console.WriteLine("List is Empty!!");
+            }
+            else
+            {
+                Node<T> temp = head;
+                while (temp.Next != null && !(temp.value.Equals(value)))
+                {
+                    temp = temp.Next;
+                }
+                if (temp.value.Equals(value))
+                {
+                    Console.WriteLine("The element you Searched is present in the list");
+                }
+                else
+                {
+                    Console.WriteLine("The element you Searched is not present in the list");
+                }
+            }
+        }
         public void Display()
         {
             Node<T> temp = head;
