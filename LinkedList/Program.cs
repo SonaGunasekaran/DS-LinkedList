@@ -18,6 +18,8 @@ namespace LinkedList
             linkedList.RemoveAtFirst();
             //deleting Last element in the List
             linkedList.RemoveAtLast();
+            //searching the element
+            linkedList.Search(70);
             linkedList.Display();
             Console.Read();
         }
