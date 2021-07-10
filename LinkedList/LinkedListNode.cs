@@ -78,7 +78,7 @@ namespace LinkedList
             }
         }
         //Delete first element 
-        public void RemoveFirst()
+        public void RemoveAtFirst()
         {
             if (head == null)
             {
@@ -89,7 +89,24 @@ namespace LinkedList
                 head = head.Next;
             }
         }
+        //Delete Last element
+        public void RemoveAtLast()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("List is empty!!");
 
+            }
+            else
+            {
+                Node<T> temp = head;
+                while (temp.Next.Next != null)
+                {
+                    temp = temp.Next;
+                }
+                temp.Next = null;
+            }
+        }
         public void Display()
         {
             Node<T> temp = head;
