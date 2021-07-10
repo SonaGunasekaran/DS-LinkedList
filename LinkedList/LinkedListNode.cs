@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LinkedList
 {
-    class LinkedListNode<T>
+    public class LinkedListNode<T>
     {
         private Node<T> head;
         //Add the elements in the front
@@ -47,7 +47,7 @@ namespace LinkedList
         //Add element at middle
         public void InsertMiddle(T value, T midValue)
         {
-            //creating the new node with given value
+            
             Node<T> newNode = new Node<T>(value);
             //check whether the head is null or not . 
             if (head == null)
@@ -108,11 +108,11 @@ namespace LinkedList
             }
         }
         //Search the element in the list
-        public void Search(T value)
+        public int Search(T value)
         {
             if (head == null)
             {
-                Console.WriteLine("List is Empty!!");
+                return 0;
             }
             else
             {
@@ -123,12 +123,9 @@ namespace LinkedList
                 }
                 if (temp.value.Equals(value))
                 {
-                    Console.WriteLine("The element you Searched is present in the list");
+                    return 1;
                 }
-                else
-                {
-                    Console.WriteLine("The element you Searched is not present in the list");
-                }
+                return 0;
             }
         }
         public void Display()
