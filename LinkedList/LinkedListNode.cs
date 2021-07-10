@@ -24,6 +24,27 @@ namespace LinkedList
             }
         }
 
+        public void AddLast(T value)
+        {
+            
+            Node<T> newNode = new Node<T>(value);
+            //check whether the head is null or not . 
+            if (head == null)
+            {
+                head = newNode;
+            }
+            
+            else
+            {
+                Node<T> temp = head;
+                while (temp.Next != null)
+                {
+                    temp = temp.Next;
+                }
+                temp.Next = newNode;
+            }
+        }
+
         public void Display()
         {
             Node<T> temp = head;
