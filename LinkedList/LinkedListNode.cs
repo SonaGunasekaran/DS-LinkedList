@@ -23,7 +23,7 @@ namespace LinkedList
                 head = newNode;
             }
         }
-
+        //Add element at last
         public void AddLast(T value)
         {
             
@@ -44,6 +44,39 @@ namespace LinkedList
                 temp.Next = newNode;
             }
         }
+        //Add element at middle
+        public void InsertMiddle(T value, T midValue)
+        {
+            //creating the new node with given value
+            Node<T> newNode = new Node<T>(value);
+            //check whether the head is null or not . 
+            if (head == null)
+            {
+                head = newNode;
+            }
+            
+            else
+            {
+                // local variable to hold the address
+                Node<T> preNode = head;
+                Node<T> temp = preNode.Next;
+                while (preNode.Next != null && !(preNode.value.Equals(midValue)))
+                {
+                    preNode = temp;
+                    temp = temp.Next;
+                }
+                if (preNode.value.Equals(midValue))
+                {
+                    newNode.Next = preNode.Next;
+                    preNode.Next = newNode;
+                }
+                else
+                {
+                    Console.WriteLine(" ", midValue, value);
+                    preNode.Next = newNode;
+                }
+            }
+        }
 
         public void Display()
         {
@@ -61,6 +94,5 @@ namespace LinkedList
                 }
             }
         }
-            
     }
 }
