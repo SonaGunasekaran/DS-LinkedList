@@ -18,6 +18,8 @@ namespace LinkedList
             linkedList.AddLast(70);
             //inserting element at middle
             linkedList.InsertMiddle(35, 56);
+            //deleting First element in the List
+            linkedList.RemoveFirst();
             linkedList.Display();
             Console.Read();
         }
