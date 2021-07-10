@@ -12,14 +12,12 @@ namespace LinkedList
             linkedList.AddFront(70);
             linkedList.AddFront(30);
             linkedList.AddFront(56);
-            //inserting elements at end
-            linkedList.AddLast(56);
-            linkedList.AddLast(30);
-            linkedList.AddLast(70);
             //inserting element at middle
             linkedList.InsertMiddle(35, 56);
             //deleting First element in the List
-            linkedList.RemoveFirst();
+            linkedList.RemoveAtFirst();
+            //deleting Last element in the List
+            linkedList.RemoveAtLast();
             linkedList.Display();
             Console.Read();
         }
