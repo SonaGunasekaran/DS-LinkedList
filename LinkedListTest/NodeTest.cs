@@ -24,14 +24,20 @@ namespace LinkedListTest
             linkedList.AddFront(70);
             linkedList.AddFront(30);
             linkedList.AddFront(56);
-            //act
-           int  actual = linkedList.Search(30);
+            int actual = linkedList.Search(30);
             int expected = 1;
-            linkedList.InsertMiddle(45, 30);
-
-            //Assert
+            linkedList.InsertMiddle(40,30);
             Assert.AreEqual(expected, actual);
-
+        }
+        [TestMethod]
+        public void SizeTest()
+        {
+            linkedList.AddFront(70);
+            linkedList.AddFront(30);
+            linkedList.AddFront(56);
+            int actual = linkedList.SizeOf();
+            int expected = 3;
+            Assert.AreEqual(expected, actual);
         }
     }
 }

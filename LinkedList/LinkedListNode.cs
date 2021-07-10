@@ -128,6 +128,24 @@ namespace LinkedList
                 return 0;
             }
         }
+        public int SizeOf()
+        {
+            if (head == null)
+            {
+                return 0;
+            }
+            else
+            {
+                Node<T> temp = head;
+                int count = 0;
+                while (temp != null)
+                {
+                    count++;
+                    temp = temp.Next;
+                }
+                return count;
+            }
+        }
         public void Display()
         {
             Node<T> temp = head;
