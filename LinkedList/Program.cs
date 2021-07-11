@@ -20,6 +20,7 @@ namespace LinkedList
             linkedList.RemoveAtLast();
             //searching the element
             linkedList.Search(70);
+            linkedList.Sort();
             linkedList.Display();
             Console.Read();
         }

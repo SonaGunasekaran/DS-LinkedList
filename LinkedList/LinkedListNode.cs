@@ -146,6 +146,39 @@ namespace LinkedList
                 return count;
             }
         }
+
+        public void Sort()
+        {
+            //Node current will point to head  
+            Node<T> current = head, index = null;
+            T temp;
+
+            if (head == null)
+            {
+                return;
+            }
+            else
+            {
+                while (current != null)
+                {
+                    //Node index will point to node next to current  
+                    index = current.Next;
+
+                    while (index != null)
+                    {
+                        //If current node's data is greater than index's node data, swap the data between them  
+                        if (current.value.CompareTo(index.value)>0)
+                        {
+                            temp = current.value;
+                            current.value = index.value;
+                            index.value = temp;
+                        }
+                        index = index.Next;
+                    }
+                    current = current.Next;
+                }
+            }
+        }
         public void Display()
         {
             Node<T> temp = head;
